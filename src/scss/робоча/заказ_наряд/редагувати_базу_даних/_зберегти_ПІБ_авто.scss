@@ -1,0 +1,59 @@
+#save-prompt-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+
+  &.active {
+    display: flex;
+  }
+
+  .modal-content-save {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    min-width: 280px;
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+    }
+
+    .save-buttons {
+      display: flex;
+      justify-content: space-around;
+      gap: 15px;
+
+      button {
+        padding: 8px 16px;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        cursor: pointer;
+        background-color: #00bcd4;
+        color: white;
+        transition: background-color 0.3s ease;
+
+        &.btn-save-cancel {
+          background-color: #f44336;
+        }
+
+        &:hover {
+          background-color: #0097a7;
+
+          &.btn-save-cancel {
+            background-color: #d32f2f;
+          }
+        }
+      }
+    }
+  }
+}

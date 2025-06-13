@@ -1,0 +1,196 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.modal-overlay-create-sakaz_narad {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+}
+
+.modal-content-create-sakaz_narad {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  width: 500px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  font-family: "Segoe UI", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+}
+
+.modal-close-create-sakaz_narad {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  font-size: 20px;
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.2s;
+
+  &:hover {
+    color: red;
+    font-weight: bold;
+  }
+}
+
+h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+.field-create-sakaz_narad {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  position: relative;
+}
+
+.field-row-create-sakaz_narad {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 1rem;
+
+  .field-create-sakaz_narad {
+    flex: 1 1 calc(33.333% - 8px);
+    min-width: 120px;
+  }
+}
+
+.input-create-sakaz_narad {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 15px;
+  border: 1px solid #00bcd4;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.2s;
+
+  &::placeholder {
+    color: #aaa;
+  }
+
+  &:focus {
+    border-color: #0097a7;
+    box-shadow: 0 0 0 2px rgba(0, 188, 212, 0.3);
+  }
+}
+
+.suggestions-list-create-sakaz_narad {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 4px;
+  max-height: 200px;
+  overflow-y: auto;
+  list-style: none;
+  padding: 0;
+  background: #e0f7fa;
+  border-radius: 6px;
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  li {
+    padding: 10px 14px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+
+    &:hover {
+      background-color: #b2ebf2;
+    }
+  }
+}
+
+label {
+  font-size: 14px;
+  color: #444;
+  font-weight: 500;
+}
+
+.buttons-create-sakaz_narad {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.btn-action-create-sakaz_narad {
+  padding: 2px;
+  min-width: 40px;
+  min-height: 40px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+
+  &:hover {
+    background-color: #0097a7;
+  }
+
+  &.btn-edit[data-unlocked="true"] {
+    background-color: #e53935 !important;
+  }
+
+  &.btn-edit[data-unlocked="false"],
+  &.btn-edit:not([data-unlocked]) {
+    background-color: #00bcd4;
+  }
+}
+
+.car-field-inline {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.car-confirm-icons {
+  display: flex;
+  gap: 4px;
+}
+
+.confirm-button {
+  font-size: 28px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  &.yes {
+    color: green;
+
+    &:hover {
+      color: darkgreen;
+    }
+  }
+
+  &.no {
+    color: crimson;
+
+    &:hover {
+      color: darkred;
+    }
+  }
+}

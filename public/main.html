@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Основний</title>
+    <link rel="stylesheet" href="../src/scss/main.scss" />
+
+    <!-- Календар -->
+    <!-- jQuery (обов’язково) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- moment.js -->
+    <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <!-- Date Range Picker -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+</head>
+
+
+<body class="page-2">
+
+    <!-- Меню -->
+    <ul class="main-menu">
+        <li><a href="#" class="menu-link" class="button" onclick="window.location.href='/'">Вихід</a></li>
+        <li><a href="#" class="menu-link" data-action="openSettings">Налаштування</a></li>
+        <li><a href="#" class="menu-link all_other_bases" data-action="openClient">Додати</a></li>
+        <li class="active"><a href="#" class="menu-link" data-action="openHome">Наряд</a></li>
+        <li><input type="text" id="dateRangePicker" readonly /></li>
+    </ul>
+
+    <!-- Заказ наряд -->
+    <a href="#" id="open-modal-sakaz_narad"></a>
+
+    <!-- Створити заказ наряд-->
+    <a href="#" id="open-modal-create-sakaz_narad"></a>
+
+    <!-- Запчастини/Робота/Джерело/Слюсара/Приймальник/Магазини -->
+    <a href="#" id="open-modal-all_other_bases"></a>
+
+    <!-- Налаштування -->
+    <a href="#" id="open-modal-settings"></a>
+
+    <!-- Таблиця -->
+    <div id="table-container-modal-sakaz_narad"></div>
+
+
+
+    
+    <!-- Підключення зібраного TS -->
+    <script type="module" src="/src/ts/main.ts"></script>
+
+    <!-- Date Range Picker календар-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script type="module" src="/src/ts/робоча/таблиця/календар.js"></script>
+
+
+
+</body>
+
+</html>

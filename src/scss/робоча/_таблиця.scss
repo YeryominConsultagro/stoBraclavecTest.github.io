@@ -1,0 +1,88 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+#table-container-modal-sakaz_narad {
+  width: 100%;
+  max-height: 93vh; // обмежити висоту (можна змінити)
+  overflow-y: auto; // дозволити вертикальний скрол
+  box-sizing: border-box;
+  padding: 0 10px;
+  z-index: 10;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.95);
+
+
+
+    thead {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+    }
+
+    th {
+      background-color: #177245;
+      color: #fff;
+      font-weight: bold;
+      padding: 10px;
+    }
+
+    td {
+      padding: 8px 12px;
+      text-align: center;
+    }
+
+    th,
+    td {
+      border: 1px solid black;
+    }
+
+    tr {
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: #e0f7fa;
+      }
+
+      &.selected {
+        background-color: #ffeb3b !important;
+      }
+    }
+
+    /*   Колір в середині */
+    .phone-blue-italic {
+      color: blue;
+      font-style: italic;
+    }
+
+    .car-red-bold {
+      color: rgb(195, 109, 28);
+      font-weight: bold;
+    }
+  }
+  .row-open {
+    background-color: #e2f7e1; // ніжно-зелений (відкритий акт)
+  }
+
+  .row-closed {
+    background-color: #f3f3f3; // ніжно-блакитний (закритий акт)
+      opacity: 0.6;
+
+  }
+
+  tr:hover {
+    background-color: #d7ebff !important; // яскравіший ховер для зручності
+    //#d0e7ff;
+         opacity: 1;
+  }
+  
+}
+
+
